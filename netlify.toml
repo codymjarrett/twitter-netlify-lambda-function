@@ -1,0 +1,15 @@
+[build]
+
+    functions = "functions"
+
+[build.environment]
+    CONSUMER_KEY = "fx95oKhMHYgytSBmiAqQ"
+	CONSUMER_SECRET = "0zfaijLMWMYTwVosdqFTL3k58JhRjZNxd2q0i9cltls"
+	ACCESS_TOKEN_KEY = "2305278770-GGw8dQQg3o5Vqfx9xHpUgJ0CDUe3BoNmUNeWZBg"
+	ACCESS_TOKEN_SECRET = "iEzxeJjEPnyODVcoDYt5MVvrg90Jx2TOetGdNeol6PeYp"
+
+[dev.environment]
+    CONSUMER_KEY = "fx95oKhMHYgytSBmiAqQ"
+	CONSUMER_SECRET = "0zfaijLMWMYTwVosdqFTL3k58JhRjZNxd2q0i9cltls"
+	ACCESS_TOKEN_KEY = "2305278770-GGw8dQQg3o5Vqfx9xHpUgJ0CDUe3BoNmUNeWZBg"
+	ACCESS_TOKEN_SECRET = "iEzxeJjEPnyODVcoDYt5MVvrg90Jx2TOetGdNeol6PeYp"
