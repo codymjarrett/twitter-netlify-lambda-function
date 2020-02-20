@@ -1,7 +1,7 @@
 const express = require('express')
 const Twitter = require('twitter')
 const serverless = require('serverless-http')
-
+const cors = require('cors')
 const app = express()
 
 const router = express.Router()
@@ -13,6 +13,7 @@ const client = new Twitter({
 	access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 })
 
+app.use(cors())
 
 router.get('/', (req,res) => {
     res.json({
