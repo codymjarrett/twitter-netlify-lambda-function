@@ -14,7 +14,10 @@ const client = new Twitter({
 })
 
 app.use(cors())
-
+app.use(function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*')
+	next()
+})
 router.get('/', (req, res) => {
 	res.json({
 		hello: 'hi',
@@ -23,7 +26,6 @@ router.get('/', (req, res) => {
 
 router.get('/twitter/user/search', (req, res) => {
 	const username = req.query.username
-	res.header('Access-Control-Allow-Origin', '*')
 	client.get('/users/search', { q: username }, (error, users, response) => {
 		if (error) {
 			res.status(error.code).send({ error })
