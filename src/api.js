@@ -13,7 +13,7 @@ const client = new Twitter({
 	access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 })
 
-app.use(cors())
+// app.use(cors())
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*')
 	next()
