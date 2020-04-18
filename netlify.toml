@@ -1,7 +1,6 @@
 [build]
-	command = "yarn run build"
-	functions = "functions"
-	publish = "dist"
+
+    functions = "functions"
 
 [build.environment]
     CONSUMER_KEY = "fx95oKhMHYgytSBmiAqQ"
