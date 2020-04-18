@@ -23,8 +23,7 @@ router.get('/', (req, res) => {
 
 router.get('/twitter/user/search', (req, res) => {
 	const username = req.query.username
-	res.set(('Access-Control-Allow-Origin': '*'))
-
+	res.header('Access-Control-Allow-Origin', '*')
 	client.get('/users/search', { q: username }, (error, users, response) => {
 		if (error) {
 			res.status(error.code).send({ error })
