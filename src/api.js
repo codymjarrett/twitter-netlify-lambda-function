@@ -15,15 +15,15 @@ const client = new Twitter({
 
 app.use(cors())
 
-router.get('/', (req,res) => {
-    res.json({
-        'hello': 'hi'
-    })
+router.get('/', (req, res) => {
+	res.json({
+		hello: 'hi',
+	})
 })
-
 
 router.get('/twitter/user/search', (req, res) => {
 	const username = req.query.username
+	res.set(('Access-Control-Allow-Origin': '*'))
 
 	client.get('/users/search', { q: username }, (error, users, response) => {
 		if (error) {
@@ -35,8 +35,5 @@ router.get('/twitter/user/search', (req, res) => {
 })
 
 app.use('/.netlify/functions/api', router)
-
-
-
 
 module.exports.handler = serverless(app)
